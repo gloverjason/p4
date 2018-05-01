@@ -1,0 +1,116 @@
+
+/* Header Styles */
+h1 {
+    float: left;
+    overflow: auto;
+    text-align: center;
+    width: 70%;
+    padding-left: 100px;
+    font-size: 3.0em;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+img#runner {
+    float: left;
+    height: 90px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+div#header {
+    width: 100%;
+    height: 100px;
+}
+
+/*Image Styles */
+
+img#mainImage {
+    width: 100%;
+}
+
+/* Body styles */
+body {
+    background-color: rgb(230, 243, 255);
+}
+
+
+/* Navigation Styles */
+nav {
+    /*border: solid;*/
+    width: 20%;
+    float: left;
+    font-family: "Ariel", sans-serif;
+}
+
+nav li {
+
+    padding: 10px 5px 10px 5px;
+    font-size: 1.35em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:hover {
+    color: white;
+    background-color: black;
+}
+
+nav a:visited {
+
+}
+
+/* Main Div */
+
+div#mainContent {
+    width: 70%;
+    float: left;
+    /*border: solid;*/
+    margin-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    clear: left;
+    margin-left: 10px;
+    border: solid;
+}
+
+/* Divs with borders */
+
+div.border {
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+}
+
+/* Paragraph text size */
+p.parSize {
+    font-size: 1.2em;
+}
+
+/* links */
+a {
+    text-decoration: none;
+}
+
+/* Image Cite */
+span#imageCite a {
+    color: black;
+    font-size: 0.9em;
+}

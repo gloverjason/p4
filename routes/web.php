@@ -11,11 +11,14 @@
 |
 */
 
-// Introduction; use instructions; form
-Route::get(' ', 'ActivityController@index');
+// Homepage; introduction, use instructions
+Route::get('/', 'PageController@welcome');
 
-// addActivity Results
-Route::get('/addedActivity', 'ActivityController@addActivity');
+// A list of all days and activity logs
+Route::get('/days/index', 'DayController@index');
+
+// Add activity page
+//Route::get('/activities/add', 'ActivityController@add');
 
 
 /*Route::get('/', function () {
