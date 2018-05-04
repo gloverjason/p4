@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
+use App\Day;
 
 class DayController extends Controller
 {
@@ -11,7 +13,11 @@ class DayController extends Controller
      */
     public function index()
     {
-        return view('days.index');
+        $days = Day::orderBy('date')->get();
+
+        return view('days.index')->with([
+            'days' => $days,
+        ]);
     }
 
     public function add()

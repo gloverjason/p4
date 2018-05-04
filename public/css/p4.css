@@ -114,3 +114,25 @@ span#imageCite a {
     color: black;
     font-size: 0.9em;
 }
+
+/* Activities History */
+div.activitiesHistory {
+    width: 70%;
+    float: right;
+    clear: inherit;
+    border: solid;
+    margin-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: blue;
+    align-content: center;
+}
+
+h2#daysList {
+    float:right;
+    width: 70%;
+    font-family: Arial;
+    color:blue;
+
+}
