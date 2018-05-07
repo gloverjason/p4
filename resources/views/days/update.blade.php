@@ -2,17 +2,17 @@
 
 @section('content')
 
-    <form method='POST' action='/days'>
+    <form method='POST' action='/days/{{ $day->id }}'>
+        {{ method_field('put') }}
         {{ csrf_field() }}
 
         <div class='form'>
-            <h2>Add One Day of Activity</h2>
+            <h2>Update or View Activity</h2>
             @include('days.dayFormInputs')
-            <input type='submit' value='Add One Day of Activity'>
+            <input type='submit' value='Update Activity'>
             @include('modules.error-form')
         </div>
 
     </form>
-
 
 @endsection

@@ -10,6 +10,11 @@
 </head>
 
 <body>
+
+@if(session('alert'))
+    <div class='flashAlert'>{{ session('alert') }}</div>
+@endif
+
 <div id="header">
     <header>
         <img src="/images/running1.svg" alt="Runner" id="runner">
@@ -22,7 +27,7 @@
     <ul>
         <li><a href='/'>Homepage</a></li>
         <li><a href='/days/index'>View Activities History</a></li>
-        <li>Add a Day's Activity</li>
+        <li><a href='/days/add'> Add a Day's Activities</a></li>
     </ul>
 </nav>
 

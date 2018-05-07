@@ -14,16 +14,28 @@
 // Homepage; introduction, use instructions
 Route::get('/', 'PageController@welcome');
 
-// A list of all days and activity logs
+// READ: A list of all days and activity logs
 Route::get('/days/index', 'DayController@index');
 
-// Add activity page
-//Route::get('/activities/add', 'ActivityController@add');
+
+// CREATE: Display the form to add a new day of activities
+Route::get('/days/add', 'DayController@add');
+// CREATE: Process the add day form
+Route::post('/days', 'DayController@store');
 
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+// UPDATE: Display the form to update or view a day of activities
+Route::get('/days/{id}/update', 'DayController@update');
+// UPDATE: Process the update form
+Route::put('/days/{id}', 'DayController@process');
+
+
+// DELETE: Delete confirmation page
+Route::get('/days/{id}/delete', 'DayController@delete');
+// DELETE: Process deletion
+Route::delete('/days/{id}', 'DayController@destroy');
+
+
 
 Route::get('/debug', function () {
 

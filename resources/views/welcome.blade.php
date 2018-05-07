@@ -17,7 +17,7 @@
             <p class="parSize">explanation goes here</p>
         </article><br/>
         <article>
-            <h2>How to Use This Activity Tracker</h2>
+            <h2>How to Use This Activity Tracker?</h2>
             <p class="parSize">explanation goes here</p>
         </article><br/>
     </div>

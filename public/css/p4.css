@@ -136,3 +136,23 @@ h2#daysList {
     color:blue;
 
 }
+
+div.form {
+    width: 70%;
+    float: right;
+    clear: inherit;
+    margin-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: blue;
+    align-content: center;
+}
+
+/* Flash Alert at Top of Page */
+div.flashAlert {
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 2em;
+
+}
