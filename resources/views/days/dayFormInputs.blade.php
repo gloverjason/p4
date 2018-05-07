@@ -10,6 +10,19 @@
 
 <label for='date'>Amount of Vigorous Activity (in minutes)</label>&nbsp;
 <input type='number' name='vigorous_activity' value='{{ old('vigorous_activity', $day->vigorous_activity) }}'>
-<br/><br/>
+<br/><br/><br/>
 
+<label>Which keyword(s) best describe the type of exercise you engaged in?</label><br/><br/>
+@foreach($descriptionsForCheckboxes as $descriptionId => $descriptionName)
+    <label>
+        <input
+                {{ (in_array($descriptionId, $descriptions)) ? 'checked' : '' }}
+                type='checkbox'
+                name='descriptions[]'
+                value='{{ $descriptionId }}'>
+        {{ $descriptionName }}
+    </label>
+    <br/>
+@endforeach
+<br/>
 

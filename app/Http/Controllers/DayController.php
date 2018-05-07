@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Log;
 use App\Day;
+use App\Description;
 
 class DayController extends Controller
 {
@@ -26,7 +27,9 @@ class DayController extends Controller
     public function add(Request $request)
     {
         return view('days.add')->with([
+            'descriptionsForCheckboxes' => Description::getForCheckboxes(),
             'day' => new Day(),
+            'descriptions' => [],
         ]);
     }
 
@@ -51,6 +54,7 @@ class DayController extends Controller
         $day->moderate_activity = $request->moderate_activity;
         $day->vigorous_activity = $request->vigorous_activity;
         $day->save();
+        $day->descriptions()->sync($request->input('descriptions'));
 
         // Redirect to form page and display confirmation message
         return redirect('/days/add')->with([
@@ -68,6 +72,8 @@ class DayController extends Controller
         $day = Day::find($id);
 
         return view('days.update')->with([
+            'descriptionsForCheckboxes' => Description::getForCheckboxes(),
+            'descriptions' => $day->descriptions()->pluck('descriptions.id')->toArray(),
             'day' => $day
         ]);
     }
@@ -96,6 +102,9 @@ class DayController extends Controller
         $day->date = $request->date;
         $day->moderate_activity = $request->moderate_activity;
         $day->vigorous_activity = $request->vigorous_activity;
+
+        $day->descriptions()->sync($request->input('descriptions'));
+
         $day->save();
 
         // Redirect to update page and display confirmation message
@@ -123,6 +132,10 @@ class DayController extends Controller
     public function destroy($id)
     {
         $day = Day::find($id);
+
+        // Because of the day_description pivot table, you must detach before deleting
+        $day->descriptions()->detach();
+
         $day->delete();
 
         return redirect('/days/index')->with([
