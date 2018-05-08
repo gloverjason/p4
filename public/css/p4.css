@@ -60,7 +60,7 @@ nav a {
 }
 
 nav a:link {
-    color: black;
+    /*color: black;*/
 }
 
 nav a:hover {
@@ -125,7 +125,6 @@ div.activitiesHistory {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
-    color: blue;
     align-content: center;
 }
 
@@ -133,8 +132,6 @@ h2#daysList {
     float:right;
     width: 70%;
     font-family: Arial;
-    color:blue;
-
 }
 
 div.form {
@@ -145,7 +142,6 @@ div.form {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
-    color: blue;
     align-content: center;
 }
 

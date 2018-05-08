@@ -28,6 +28,7 @@
         <li><a href='/'>Homepage</a></li>
         <li><a href='/days/index'>View Activities History</a></li>
         <li><a href='/days/add'> Add a Day's Activities</a></li>
+        <li><a href='/days/total'>See Your Activities Totals</a></li>
     </ul>
 </nav>
 
