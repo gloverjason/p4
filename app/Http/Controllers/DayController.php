@@ -143,4 +143,46 @@ class DayController extends Controller
         ]);
     }
 
+    /*
+     * READ: Show and calculate a users total activity since inception
+     */
+    public function total()
+    {
+        //  First day user started logging activity
+        $first = Day::orderBy('date')->first();
+
+        // An object containing all the days
+        $days = Day::all();
+
+        // Iterate through the object to sum the total moderate and vigorous activities
+        $sumM = 0;
+        $sumV = 0;
+
+        if(count($days) > 0) {
+            foreach ($days as $day) {
+                $moderate = $day->moderate_activity;
+                $vigorous = $day->vigorous_activity;
+
+                $sumM = $sumM + $moderate;
+                $sumV = $sumV + $vigorous;
+            }
+        }
+
+        // Convert to hours to improve user experience
+        $sumM = round($sumM/60, 1);
+        $sumV = round($sumV/60, 1);
+
+        //
+
+
+
+        return view('days.total')->with([
+            'first' => $first->date,
+            'sumM' => $sumM,
+            'sumV' => $sumV
+        ]);
+
+    }
+
+
 }
