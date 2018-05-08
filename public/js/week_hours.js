@@ -1,6 +1,6 @@
 // Put everything inside an onload function so JavaScript doesn't try to access
 // HTML elements before they are loaded.
-window.onload = function() {
+window.onload = function () {
 
     //Create event listener
     document.getElementById("weekButton").addEventListener("click", weekCalculator);

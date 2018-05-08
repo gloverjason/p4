@@ -1,4 +1,4 @@
-# Project 4
+# Project 4 (Aerobic Activity Tracker)
 + By: Jason Glover
 + Production URL: <http://p4.jasonsapps.tech>
 
@@ -6,43 +6,47 @@
 *The following is example info taken from Foobooks; delete and replace with your own info.*
 
 Primary tables:
-  + `books`
-  + `authors`
-  + `tags`
-  + `users`
+  + `days`
+  + `descriptions`
   
 Pivot table(s):
-  + `book_tag`
+  + `day_description`
 
 
 ## CRUD
-*Describe what action I need take in order to see an example of all 4 CRUD operations in your app. I've filled this out with examples from the Foobooks app - delete this and replace with your own info. If one operation is performed multiple times (e.g. Read), you only need to provide 1 example.*
 
 __Create__
-  + Visit <http://p4.foobooks.me/books/create>
+  + Visit <http://p4.jasonsapps.tech/days/add>
   + Fill out form
-  + Click *Add new book*
+  + Click *Add One Day of Activity*
   + Observe confirmation message
   
 __Read__
-  + Visit <http://p4.foobooks.me/books> see a listing of all books
+  + Example 1:  Visit <http://p4.jasonsapps.tech/days/index> to see a listing of all the days a user has engage in aerobic activity
+  + Example 2:  Visit <http://p4.jasonsapps.tech/days/total> to see the total amounts of activity since a user began tracking activities.
+  You can also calculate the average hours of activity per a week on this page.
   
 __Update__
-  + Visit <http://p4.foobooks.me/books>; choose the Edit button next to one of the books
-  + Make some edit to form
-  + Click *Save changes*
+  + Visit <http://p4.jasonsapps.tech/days/index>
+  + Click *View/Update* on a day you would like to view/update
+  + Change the data currently displayed in the form
+  + Click *Update Activity*
   + Observe confirmation message
   
 __Delete__
-  + Visit <http://p4.foobooks.me/books>; choose the Delete button next to one of the books
+  + Visit <http://p4.jasonsapps.tech/days/index>
+  + Click *Delete* on a day you would like to delete
   + Confirm deletion
+  + Click *Delete Activity*
   + Observe confirmation message
 
 ## Outside resources
-*Your list of outside resources go here*
+<https://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm>
+<https://www.cdc.gov/physicalactivity/basics/adults/index.htm>
+<https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm>
+<https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise-intensity/art-20046887>
 
 ## Code style divergences
-*List any divergences from PSR-1/PSR-2 and course guidelines on code style*
 
 ## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*
+

@@ -8,14 +8,12 @@ class DayDescriptionTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
      * @return void
      */
     public function run()
     {
-
         // Activity descriptions on the right will be associated with the dates on the left
-        $days =[
+        $days = [
             '2018-04-01' => ['running'],
             '2018-04-02' => ['basketball'],
             '2018-04-03' => ['cycling', 'other'],
@@ -26,7 +24,6 @@ class DayDescriptionTableSeeder extends Seeder
 
         // Create a pivot for each day's description
         foreach ($days as $date => $descriptions) {
-
             // Get a day
             $day = Day::where('date', 'like', $date)->first();
 

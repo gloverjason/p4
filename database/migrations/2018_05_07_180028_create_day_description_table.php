@@ -8,13 +8,11 @@ class CreateDayDescriptionTable extends Migration
 {
     /**
      * Run the migrations.
-     *
      * @return void
      */
     public function up()
     {
         Schema::create('day_description', function (Blueprint $table) {
-
             $table->increments('id');
             $table->timestamps();
 

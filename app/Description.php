@@ -22,6 +22,7 @@ class Description extends Model
         foreach ($descriptions as $description) {
             $descriptionsForCheckboxes[$description->id] = $description->type;
         }
+
         return $descriptionsForCheckboxes;
     }
 }

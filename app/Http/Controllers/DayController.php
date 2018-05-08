@@ -125,6 +125,7 @@ class DayController extends Controller
             'day' => $day,
         ]);
     }
+
     /*
     * DELETE: Delete specific day of activity
     * DELETE /days/{id}/delete
@@ -158,7 +159,7 @@ class DayController extends Controller
         $sumM = 0;
         $sumV = 0;
 
-        if(count($days) > 0) {
+        if (count($days) > 0) {
             foreach ($days as $day) {
                 $moderate = $day->moderate_activity;
                 $vigorous = $day->vigorous_activity;
@@ -169,20 +170,16 @@ class DayController extends Controller
         }
 
         // Convert to hours to improve user experience
-        $sumM = round($sumM/60, 1);
-        $sumV = round($sumV/60, 1);
+        $sumM = round($sumM / 60, 1);
+        $sumV = round($sumV / 60, 1);
 
         //
-
-
 
         return view('days.total')->with([
             'first' => $first->date,
             'sumM' => $sumM,
             'sumV' => $sumV
         ]);
-
     }
-
 
 }
