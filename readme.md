@@ -3,7 +3,6 @@
 + Production URL: <http://p4.jasonsapps.tech>
 
 ## Database
-*The following is example info taken from Foobooks; delete and replace with your own info.*
 
 Primary tables:
   + `days`
@@ -41,10 +40,10 @@ __Delete__
   + Observe confirmation message
 
 ## Outside resources
-<https://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm>
-<https://www.cdc.gov/physicalactivity/basics/adults/index.htm>
-<https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm>
-<https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise-intensity/art-20046887>
+  + <https://www.cdc.gov/healthyschools/physicalactivity/guidelines.htm>
+  + <https://www.cdc.gov/physicalactivity/basics/adults/index.htm>
+  + <https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm>
+  + <https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise-intensity/art-20046887>
 
 ## Code style divergences
 

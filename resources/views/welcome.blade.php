@@ -5,7 +5,7 @@
         <img id="mainImage" src="images/running_blue.jpg" alt="Motivational Quote" />
         <br/>
         <span id='imageCite'><a href='https://www.freepik.com/free-vector/man-running-with-blue-flowing-wave_1177163.htm'>
-        Designed by Freepik</a></span>
+        Image Designed by Freepik</a></span>
         <br/><br/>
 
         <br/>
